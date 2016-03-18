@@ -1,8 +1,46 @@
 $blue: #B0E2FF;
+$white: #F8F8FF;
 
 img {
   width: 200px;
-  height: 200 px;
+  height: 200px;
+}
+
+.jumbotron {
+  text-align: center;
+  background: $white;
+  box-shadow: 2px 2px 2px #888888;
+  label {
+    margin-top: 20px;
+  }
+  #label{
+    font-size: 20px;
+
+  }
+  input {
+    height : 32px;
+    margin-right: 5px;
+    width: 200px;
+  }
+}
+
+.container.profile-section {
+  background: $white;
+}
+
+#userInfo {
+  margin-top: 20px;
+  .picture {
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+    margin-top: 20px;
+    height: 200px;
+  }
+  .profile {
+    padding-top: 75px;
+  }
 }
 
 .box {
