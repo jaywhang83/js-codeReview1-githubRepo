@@ -5,9 +5,8 @@ $(document).ready(function(){
     event.preventDefault();
     var userName = $('#userName').val();
     getRepo(userName);
-    $('#userName').val("");
+    $('#userName').val('');
   });
-
 });
 
 var apiKey = require('./../.env').apiKey;
@@ -28,15 +27,18 @@ exports.getRepo = function(userName) {
                           + " <a href='" + profile.followers_url + "'>" + "Following: " + profile.following + "</a>"
                           + "</div></div>");
     repository.forEach(function(repo) {
-        $('#repos').append("<a href ='" + repo.html_url + "'>"
+      console.log(JSON.stringify(repo));
+        $('#repos').append("<a href ='" + repo.html_url + "' target ='_blank'>"
                               + "<div class='col-md-4 box'>"
                                 + "<h4>Name: " + repo.name + "</h4>"
                                 + "<p>Created on: "+ moment(repo.created_at).format("MM/DD/YYYY") + "</p>"
+                                + "<p>Language: " + repo.language + "</p>"
                                 + "<p>Description: " + (repo.description === "" ? "n/a" : repo.description) + "</p>"
                               + "</div>"
                             + "</a>");
     });
-  }).fail(function(error) {
+  })
+  .fail(function(error) {
     console.log(error.responseJSON.message);
   });
   return getRepo;

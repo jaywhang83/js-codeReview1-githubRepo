@@ -1,4 +1,4 @@
-$blue: #B0E2FF;
+$green: #9ccc65;
 $white: #F8F8FF;
 
 img {
@@ -24,10 +24,6 @@ img {
   }
 }
 
-.container.profile-section {
-  background: $white;
-}
-
 #userInfo {
   margin-top: 20px;
   .picture {
@@ -38,13 +34,10 @@ img {
     margin-top: 20px;
     height: 200px;
   }
-  .profile {
-    padding-top: 75px;
-  }
 }
 
 .box {
-  background: $blue;
+  background: $green;
   text-align: center;
   box-shadow: 5px 5px 5px #888888;
   margin: 40px 80px;
