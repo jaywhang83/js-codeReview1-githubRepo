@@ -5,6 +5,7 @@ $(document).ready(function(){
     event.preventDefault();
     var userName = $('#userName').val();
     getRepo(userName);
+    $('#userName').val("");
   });
 
 });
