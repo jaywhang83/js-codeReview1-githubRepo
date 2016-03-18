@@ -1,12 +1,18 @@
 $blue: #B0E2FF;
 
 img {
-  size: 
+  width: 200px;
+  height: 200 px;
 }
 
 .box {
   background: $blue;
   text-align: center;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 5px 5px 5px #888888;
   margin: 40px 80px;
+
+}
+
+.box:hover {
+  box-shadow: 10px 10px 5px #888888;
 }
